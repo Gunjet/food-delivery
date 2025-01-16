@@ -8,7 +8,7 @@ foodCategoryRouter.get('/', async (req: Request, res: Response) => {
   res.json(foodCategories);
 });
 
-foodCategoryRouter.post('/:id', async (req: Request, res: Response) => {
+foodCategoryRouter.post('/', async (req: Request, res: Response) => {
     const updatedItem = await FoodCategoryModel.create({
       categoryName: req.body.categoryName
     });

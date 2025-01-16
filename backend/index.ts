@@ -21,10 +21,6 @@ const connectMongoDB = async () => {
 
 connectMongoDB();
 
-
-
-
-
 app.use('/food-category/', foodCategoryRouter);
 app.use('/food/', foodRouter);
 
