@@ -16,7 +16,7 @@ foodRouter.post('/', async (req, res) => {
     category:'678b772248b800d5710a804c',
     image:'https://desibaniye.com/wp-content/uploads/2022/02/double-cheese-pizza.jpg',
     ingredients:'dough, double cheese',
-    price:40000
+    price: 12.99
   })
   res.json(newFood);
 });
