@@ -12,11 +12,31 @@ foodRouter.get('/', async (req, res) => {
 foodRouter.post('/', async (req, res) => {
 
   const newFood = await FoodModel.create({
-    foodName:req.body.foodName,
-    category:'678b772248b800d5710a804c',
-    image:'https://desibaniye.com/wp-content/uploads/2022/02/double-cheese-pizza.jpg',
-    ingredients:'dough, double cheese',
-    price: 12.99
+    foodName: req.body.foodName,
+    category: req.body.category,
+    image: req.body.image,
+    ingredients: req.body.ingredients,
+    price: req.body.price
   })
   res.json(newFood);
 });
+
+foodRouter.put('/:id', async (req, res) => {
+    const updatedItem = await FoodModel.findByIdAndUpdate(
+      req.params.id,
+      {
+        foodName: req.body.foodName,
+        category: req.body.category,
+        image: req.body.image,
+        ingredients: req.body.ingredients,
+        price: req.body.price
+      },
+      { new: true } 
+    );
+    res.json(updatedItem);
+});
+
+foodRouter.delete('/:id', async (req, res) => {
+  const deletedItem = await FoodModel.findByIdAndDelete(req.params.id);
+  res.json(deletedItem)
+})
