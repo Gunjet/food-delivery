@@ -5,8 +5,9 @@ const cors = require('cors');
 import { foodCategoryRouter } from "./router/food-category";
 import { foodRouter } from "./food";
 
-const PORT = 4000;
+const PORT = 4001;
 const app = express();
+// const {verifytoken} = require("@clerk/backend")
 
 app.use(express.json());
 app.use(cors())
