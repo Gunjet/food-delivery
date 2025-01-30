@@ -1,10 +1,9 @@
 import { Router } from "express";
-import { FoodModel } from "./models/food";
+import { FoodModel } from "../models/food";
 
 export const foodRouter = Router ();
 
 foodRouter.get('/', async (req, res) => {
-
   const allFoods = await FoodModel.find({})
   res.json(allFoods);
 });

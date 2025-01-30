@@ -2,8 +2,8 @@ import { configDotenv  } from "dotenv";
 import express from 'express'
 import mongoose from "mongoose";
 const cors = require('cors');
-import { foodCategoryRouter } from "./router/food-category";
-import { foodRouter } from "./food";
+import { foodCategoryRouter } from "./router/FoodCategory";
+import { foodRouter } from "./router/food";
 
 const PORT = 4001;
 const app = express();
