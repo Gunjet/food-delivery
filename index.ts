@@ -3,7 +3,7 @@ import express from 'express'
 import mongoose from "mongoose";
 const cors = require('cors');
 import { foodCategoryRouter } from "./router/FoodCategory";
-import { foodRouter } from "./router/food";
+import { foodRouter } from "./router/Food";
 
 const PORT = 4001;
 const app = express();

@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { FoodModel } from "../models/food";
+import { FoodModel } from "../models/Food";
 
 export const foodRouter = Router ();
 
